@@ -1,0 +1,261 @@
+@charset 'utf-8';
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  vertical-align: top;
+}
+
+
+.inner {
+  max-width: 960px; margin: 0 auto;
+}
+
+.clearfix::after, 
+.clearfix::before {
+  content: ""; 
+  display: block; 
+  clear: both;
+}
+
+.all_wrap {
+  width: 100%; 
+  margin-bottom: 150px;
+}
+
+#nav.on {
+  width: 960px; 
+  position: fixed; 
+  top: 0; 
+  transition: all 1s ease-in-out;
+}
+
+#nav.on > ul > li {
+  background-color: #fff;
+}
+
+#nav > ul {
+  font-size: 0; 
+  margin: 0; 
+  padding: 0; 
+  width: 100%;
+}
+
+#nav > ul > li {
+  display: inline-block; 
+  vertical-align: middle; 
+  width: 25%; 
+  height: 50px; 
+  line-height: 50px; 
+  border: 1px solid #dfdfde; 
+  word-break: keep-all; 
+  text-align: center
+}
+
+#nav > ul > li > a {
+  display: inline-block; 
+  line-height: 50px; 
+  height: 50px; 
+  font-size: 18px; 
+  font-weight: bold; 
+  color: #222222; 
+  text-align: center; 
+  position: relative; 
+} 
+
+#nav > ul > li+li {
+  border-left: 0
+}
+
+#nav > ul > li.on {
+  background-color: #ff772d; 
+  color: #fff;
+}
+
+#nav > ul > li.on > a {
+  color: #fff;
+}
+
+.floating {
+  position: fixed;
+  top: 89%; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  display: none;
+}
+
+.floating.on {
+  opacity: 1;
+}
+
+.floating > a {    
+  display: block; 
+  width: 290px; 
+  height: 75px; 
+  line-height: 75px; 
+  font-size: 32px; 
+  font-weight: bold; 
+  color: #ffcb4d; 
+  background-color: #2d1c6f; 
+  text-align: center; 
+  margin: 0 auto; border-radius: 47px; border: 1px solid #ffcb4d;
+}
+
+img {
+  width: 100%;
+}
+
+.review > li {
+  width: 24%; 
+  height: auto;
+  float: left; 
+  margin-right: 1.3%; 
+  margin-bottom: 1.3%
+}
+
+.review > li:nth-child(4) {
+  margin-right: 0;
+}
+
+.review > li:nth-child(8) {
+  margin-right: 0;
+}
+
+.review > li > a {
+  display: block; 
+  width: 100%;
+}
+
+.is_mo {
+  display: none;
+}
+
+#sec1go, #sec2go, #sec3go, #sec4go {
+  cursor: pointer;
+}
+
+
+@media all and (max-width: 900px){
+  #nav.on {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 680px) {
+  #nav > ul > li > a {
+    font-size: 14px;
+  }
+
+  .br {
+    display: block; height: 0; line-height: 0; 
+  }
+ 
+  .floating > a {
+    display: block; 
+    width: 195px; 
+    height: 50px; 
+    line-height: 50px; 
+    font-size: 21px; 
+    font-weight: bold; 
+    color: #ffcb4d; 
+    background-color: #2d1c6f; 
+    text-align: center; 
+    margin: 0 auto; 
+    border-radius: 47px;
+  }
+
+  #nav > ul > li {
+    line-height: 20px; 
+  }
+
+  #nav > ul > li > a {
+    line-height: 20px; 
+    text-align: center; 
+    padding: 3px;
+  }
+
+  .br {
+    display: block; 
+    text-align: center;
+  }
+
+  .review > li {
+    width: 49%; 
+    height: auto;
+    float: left;
+    margin-right: 0%;
+    margin-bottom: 2%;
+  }
+
+  .review > li:nth-child(1) {
+    margin-right: 2%;
+  }
+
+  .review > li:nth-child(3) {
+    margin-right: 2%;
+  } 
+
+  .review > li:nth-child(5) {
+    margin-right: 2%;
+  }
+
+  .review > li:nth-child(7) {
+    margin-right: 2%;
+  } 
+
+  .is_pc {
+    display: none;
+  }
+
+  .is_mo {
+    display: block;
+  }
+
+  #nav > ul > li:hover > a::after {
+    display: none;
+  }
+
+  .sec4 {
+    padding-top: 40px;
+  }
+
+  #nav.on {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    transition: all 1s ease-in-out;
+  } 
+
+  .all_wrap {
+    margin-bottom: 100px
+  }
+
+  .floating {
+    top: 91%;
+  }
+}
